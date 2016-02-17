@@ -1,0 +1,24 @@
+	
+	{% extends 'mainlayout.html' %}
+
+	{% block content %} 
+		<h2>Artist</h2>
+
+			{% for artist in artists %}
+
+				<div class = "row">
+					<div class = "col-md-2"> 
+						<a href="/artist/{{ artist.id }}">{{ artist.name }}</a>
+					</div>
+					<div class = "col-md-2"> 
+						<span>{{ artist.year_formed }}</span>
+					</div>
+					<div class = "col-md-1"> 
+						<a href="/artist/{{ artist.id }}/albums">view albums</a>	
+					</div>	
+
+				</div>
+
+			{% endfor %}
+		
+	{% endblock %}
